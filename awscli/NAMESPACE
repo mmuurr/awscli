@@ -1,0 +1,13 @@
+import(futile.logger)
+importFrom(magrittr, `%>%`)
+
+##exportPattern("^[^\\.]")
+
+export(exec_aws_cli)
+
+export(s3api_list_objects)
+export(s3api_put_object)
+export(s3api_get_object)
+
+export(configure_get)
+export(configure_list)
