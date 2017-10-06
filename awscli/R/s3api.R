@@ -22,3 +22,9 @@ s3api_get_object <- function(bucket, key, filepath) {
                  "key" = key,
                  filepath)
 }
+
+s3api_delete_object <- function(bucket, key) {
+    exec_aws_cli("s3api", "delete-object",
+                 "bucket" = bucket,
+                 "key" = key)
+}
