@@ -7,7 +7,7 @@ exec_aws_cli <- function(cmd, subcmd, ...) {
 
     x$stdout <- rawToChar(x$stdout) %>% stringr::str_trim()
     x$stderr <- rawToChar(x$stderr) %>% stringr::str_trim()
-    flog.debug("aws returned:\n%s", sstr(x))
+    ##flog.debug("aws returned:\n%s", sstr(x))
 
     if(x$status != 0L) {
         stop(x$stderr)
