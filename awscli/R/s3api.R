@@ -28,3 +28,13 @@ s3api_delete_object <- function(bucket, key) {
                  "bucket" = bucket,
                  "key" = key)
 }
+
+s3api_head_object <- function(bucket, key) {
+    x <- exec_aws_cli("s3api", "head-object",
+                      "bucket" = bucket, "key" = key)
+    if(jsonlite::validate(x$stdout)) {
+        jsonlite::fromJSON(x$stdout)
+    } else {
+        x$stdout
+    }
+}
