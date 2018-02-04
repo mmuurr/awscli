@@ -1,9 +1,15 @@
-#' Create the command line args for the aws system call.
+#' @title Convert a list to AWS CLI args
 #'
-#' @param ... A list of arguments.
-#' Any entries that are named will be mapped to the "--<name> <val>" pattern.
-#' Unnamed entries will simply be inserted in the system call as "<val>".
-#' Named entries with \code{NULL} values will be inserted in the system call as "--<name>" only.
+#' @param ... A list of arguments that will be mapped to command-line args for a system call to the AWS CLI utility.
+#'   Unnamed list entries are inserted into the system call as "<val>", i.e. with no argument-specifying hyphens.
+#'   Named list entries are inserted into the system call with the "--<name> <val>" pattern.
+#'   Any named list entries a \code{NULL} value will be inserted into the system call as "--<name>" only, i.e. as a named flag.
+#'   Arguments are constructed from the list in the same order as provided in the list.
+#'
+#' @return A character vector of arguments suitable for a \code{sys::exec_internal} call.
+#'
+#' @examples
+#' list2args("foo", bar = "baz", flag = NULL)
 list2args <- function(...) {
     l <- list(...)
 
