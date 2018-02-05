@@ -1,0 +1,7 @@
+reference:
+ - title: configure commands
+   contents:
+    - starts_with("configure_")
+ - title: s3api commands
+   contents:
+    - starts_with("s3api_")
