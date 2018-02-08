@@ -4,5 +4,8 @@
 \alias{s3api_put_object}
 \title{Put object}
 \usage{
-s3api_put_object(filepath, bucket, key)
+s3api_put_object(filepath, bucket, key, ...)
+}
+\arguments{
+\item{...}{Additional AWS CLI s3api args, excluding `bucket`, `key`, and `body`.}
 }

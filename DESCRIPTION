@@ -1,6 +1,6 @@
 Package: awscli
 Title: AWS-CLI (Amazon Web Services Command Line Interface) Wrapper
-Version: 1.2.0
+Version: 1.3.0
 Authors@R: person("Murat", "Tasan", email = "mmuurr@gmail.com", role = c("aut", "cre"))
 Description: A lightweight wrapper of the AWS CLI tools (which naturally requires the 'aws' program to be installed and on the executing environment's PATH).
 URL: https://github.com/mmuurr/awscli-R-Package

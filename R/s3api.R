@@ -15,11 +15,16 @@ s3api_list_objects <- function(bucket, ...) {
 }
 
 #' @title Put object
-s3api_put_object <- function(filepath, bucket, key) {
+#' @param ... Additional AWS CLI s3api args, excluding `bucket`, `key`, and `body`.
+s3api_put_object <- function(filepath, bucket, key, ...) {
+    if(length(intersect(c("bucket", "key", "body"), names(list(...)))) != 0) {
+        stop("bucket, key, and body are not allowed as optional named args")
+    }
     exec_aws_cli("s3api", "put-object",
                  "bucket" = bucket,
                  "key" = key,
-                 "body" = filepath)
+                 "body" = filepath,
+                 ...)
 }
 
 #' @title Get object
