@@ -1,10 +1,9 @@
 Package: awscli
 Title: AWS-CLI (Amazon Web Services Command Line Interface) Wrapper
-Version: 1.3.0
+Version: 1.3.1
 Authors@R: person("Murat", "Tasan", email = "mmuurr@gmail.com", role = c("aut", "cre"))
 Description: A lightweight wrapper of the AWS CLI tools (which naturally requires the 'aws' program to be installed and on the executing environment's PATH).
-URL: https://github.com/mmuurr/awscli-R-Package
-BugReports: https://github.com/mmuurr/awscli-R-Package/issues
+BugReports: https://github.com/mmuurr/awscli/issues
 Depends: R (>= 3.3.3), methods
 Imports: zzz, futile.logger, magrittr, purrr, sys, stringr, jsonlite, tibble
 License: MIT + file LICENSE
