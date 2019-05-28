@@ -28,10 +28,11 @@ s3api_put_object <- function(filepath, bucket, key, ...) {
 }
 
 #' @title Get object
-s3api_get_object <- function(bucket, key, filepath) {
+s3api_get_object <- function(bucket, key, filepath, ...) {
     exec_aws_cli("s3api", "get-object",
                  "bucket" = bucket,
                  "key" = key,
+                 ...,
                  filepath)
 }
 
