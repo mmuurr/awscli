@@ -13,3 +13,5 @@ export(s3api_delete_object)
 
 export(configure_get)
 export(configure_list)
+
+export(secretsmanager_get_secret_value)
